@@ -9,7 +9,7 @@ pipeline{
             stage('Install Docker and Docker-Compose'){
                 steps{
                     sh "curl https://get.docker.com | sudo bash"
-                    sh "sudo usermod -aG docker $(whoami)"
+                    sh "sudo usermod -aG docker ${whoami}"
                     sh "exec bash"
                     sh "sudo apt update"
                     sh "sudo apt install -y curl jq"
